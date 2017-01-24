@@ -1,4 +1,6 @@
 #include <cassert>
+#include <QtGui/QtEvents>
+
 
 #include "main_window.hpp"
 
@@ -39,4 +41,18 @@ void MainWindow::PopMenu()
 	current_widget->setVisible( true );
 	takeCentralWidget();
 	setCentralWidget( current_widget );
+}
+
+void MainWindow::keyPressEvent( QKeyEvent* const event )
+{
+	if( event == nullptr )
+		return;
+
+	if( event->key() == Qt::Key_Escape )
+	{
+		if( menu_stack_.size() >= 2 )
+			PopMenu();
+
+		event->accept();
+	}
 }

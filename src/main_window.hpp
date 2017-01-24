@@ -18,6 +18,9 @@ public: // IMenuStack
 	virtual void PushMenu( QWidget* widget ) override;
 	virtual void PopMenu() override;
 
+public:
+	virtual void keyPressEvent( QKeyEvent* event ) override;
+
 private:
 	QPointer<MainMenu> main_menu_;
 	QVector<QWidget*> menu_stack_;
