@@ -7,10 +7,12 @@ SOURCES += \
 	main_menu.cpp \
 	main_window.cpp \
 	quit_menu.cpp \
+	singleplayer_menu.cpp \
 
 HEADERS += \
 	i_menu_stack.hpp \
 	main_menu.hpp \
 	main_window.hpp \
 	quit_menu.hpp \
+	singleplayer_menu.hpp \
 
