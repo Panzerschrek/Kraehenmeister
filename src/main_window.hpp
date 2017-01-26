@@ -20,8 +20,11 @@ public: // IMenuStack
 
 public:
 	virtual void keyPressEvent( QKeyEvent* event ) override;
+	virtual void paintEvent( QPaintEvent* event ) override;
 
 private:
 	QPointer<MainMenu> main_menu_;
 	QVector<QWidget*> menu_stack_;
+
+	QImage background_image_;
 };
